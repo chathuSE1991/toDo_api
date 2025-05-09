@@ -96,7 +96,7 @@ class ToDoController extends Controller
         $update = $this->toDoRepository->update($id,['status'=>1]);
 
         if ($update) {
-            return $this->successResponse('Data has been sent successfully', 200);
+            return $this->successResponse('Todo has been updated successfully', 200);
         } else {
             return $this->errorResponse('System error', Response::HTTP_BAD_REQUEST);
         }

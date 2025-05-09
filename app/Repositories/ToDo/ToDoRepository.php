@@ -22,7 +22,7 @@ class ToDoRepository extends BaseEloquentRepository implements ToDoRepositoryInt
     }
 
     public function findTodo(){
-        return $this->model::orderBy('created_at', 'desc')->take(5)->get();
+        return $this->model::orderBy('created_at', 'desc')->where('status',0)->take(5)->get();
 
     }
 }
